@@ -10,14 +10,20 @@
                     var __choice = __pref.length;
                     if (__pref == '') {
                         $(this).next().text("Bu alan boş bırakılamaz.");
+                        // kosula uymuyorsa, renk ve label'i resetliyorum.
+                        $(this).next().removeClass("none");
+                        $(this).css({"border":"solid 1px #CC0000"});
                     } else {
                          if (__choice < 3 || __choice > 10) {
                             $(this).css({"border":"2px solid red"});
                             $(this).next().text("3 ile 10 arası karakter girebilirsin.");
                             $("p").hide();
-                            return;
+                            // kosula uymuyorsa, renk ve label'i resetliyorum.
+                            $(this).next().removeClass("none");
+                            // fazlalik return
+                            //return;
                         } else {
-                            $(this).css({"border":"1px solid #CC0000;"});
+                            $(this).css({"border":"1px solid #CC0000"}); // noktali virgul hatali.
                             $(this).next().addClass("none");
                             $("p").show();
                         }
