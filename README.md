@@ -1,1 +1,1 @@
-my-exercise-1
+İnput'ların value'lerini bir <p> tagına bazı kurallar ile bastırma uygulaması.
